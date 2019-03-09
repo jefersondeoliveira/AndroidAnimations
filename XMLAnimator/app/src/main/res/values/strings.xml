@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">XML Animator</string>
+    <string name="animated_object">Animated Object</string>
+</resources>
