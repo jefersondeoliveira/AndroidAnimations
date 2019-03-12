@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionManager xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <transition android:toScene="@layout/layout_login" android:transition="@transition/my_transitions"/>
+    <transition android:toScene="@layout/layout_singup" android:transition="@transition/my_transitions"/>
+    <transition android:toScene="@layout/activity_main" android:transition="@transition/my_transitions"/>
+
+</transitionManager>
