@@ -4,20 +4,25 @@ import android.content.Intent;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.util.Pair;
 import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView mSharedImage;
+    private ImageView mSharedImage1;
+    private ImageView mSharedImage2;
+    private ImageView mSharedImage3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mSharedImage = findViewById(R.id.sharedImage);
-        mSharedImage.setOnClickListener(mOnclickListener);
+        mSharedImage1 = findViewById(R.id.sharedImage1);
+        mSharedImage2 = findViewById(R.id.sharedImage2);
+        mSharedImage3 = findViewById(R.id.sharedImage3);
+        mSharedImage1.setOnClickListener(mOnclickListener);
 
     }
 
@@ -27,8 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent = new Intent(MainActivity.this, DetailAcitivity.class);
 
-            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                    MainActivity.this, mSharedImage, mSharedImage.getTransitionName());
+            Pair<View, String> pair1 = Pair.create((View)mSharedImage1, mSharedImage1.getTransitionName());
+            Pair<View, String> pair2 = Pair.create((View)mSharedImage2, mSharedImage2.getTransitionName());
+            Pair<View, String> pair3 = Pair.create((View)mSharedImage3, mSharedImage3.getTransitionName());
+
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, pair1, pair2, pair3);
 
             startActivity(intent, options.toBundle());
 

@@ -6,13 +6,13 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/sharedImage"
+        android:id="@+id/sharedImage1"
         android:layout_width="0dp"
         android:layout_height="400dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         android:scaleType="centerCrop"
-        android:transitionName="coffee"
+        android:transitionName="sharedImage1"
         app:layout_constraintBottom_toTopOf="@+id/description"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/coffe" />
@@ -26,5 +26,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:padding="20dp"/>
+
+    <ImageView
+        android:id="@+id/sharedImage2"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:transitionName="sharedImage2"
+        app:layout_constraintBottom_toTopOf="@+id/sharedImage1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sharedImage3"
+        app:srcCompat="@drawable/coffe" />
+
+    <ImageView
+        android:id="@+id/sharedImage3"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:transitionName="sharedImage3"
+        app:layout_constraintBottom_toTopOf="@+id/sharedImage1"
+        app:layout_constraintEnd_toStartOf="@+id/sharedImage2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/coffe" />
 
 </android.support.constraint.ConstraintLayout>
